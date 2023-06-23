@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="pch\pch.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="app\D3D12App.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="pch\d3dx12.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="app\IntegrationApp.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="app\Win32App.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="RTSKiller.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pch\pch.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="app\D3D12App.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="app\IntegrationApp.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="app\Win32App.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="RTSKiller.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="app">
+      <UniqueIdentifier>{299f816b-6096-43b7-a7b4-01e9b4d4f44c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{662f6ed2-dd5b-472c-aa26-c9d24747d41f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
