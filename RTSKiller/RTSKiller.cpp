@@ -1,7 +1,9 @@
 #include "pch.h"
 #include "RTSKiller.h"
 
-rtsk::RTSKiller::RTSKiller()
+rtsk::RTSKiller::RTSKiller() 
+	: Win32App{}
+	, D3D12App{ GetHwnd() }
 {
 }
 
@@ -26,10 +28,9 @@ void rtsk::RTSKiller::OnRender()
 
 	m_commandList->ResourceBarrier(1, &barrier);
 
-	float clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
 	const std::uint32_t rtvSize = m_device->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
 	CD3DX12_CPU_DESCRIPTOR_HANDLE rtvHandle{ m_rtvHeap->GetCPUDescriptorHandleForHeapStart(), m_frameIndex, rtvSize };
-	m_commandList->ClearRenderTargetView(rtvHandle, clearColor, 0, nullptr);
+	m_commandList->ClearRenderTargetView(rtvHandle, m_clearColor, 0, nullptr);
 
 	const CD3DX12_RESOURCE_BARRIER barrier2 = CD3DX12_RESOURCE_BARRIER::Transition(
 		backBuffer.Get(),

@@ -10,13 +10,11 @@
     <ClInclude Include="pch\d3dx12.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="app\IntegrationApp.h">
-      <Filter>app</Filter>
-    </ClInclude>
-    <ClInclude Include="app\Win32App.h">
+    <ClInclude Include="app\Win32Framework.h">
       <Filter>app</Filter>
     </ClInclude>
     <ClInclude Include="RTSKiller.h" />
+    <ClInclude Include="app\Win32App.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -26,13 +24,11 @@
     <ClCompile Include="app\D3D12App.cpp">
       <Filter>app</Filter>
     </ClCompile>
-    <ClCompile Include="app\IntegrationApp.cpp">
-      <Filter>app</Filter>
-    </ClCompile>
-    <ClCompile Include="app\Win32App.cpp">
+    <ClCompile Include="app\Win32Framework.cpp">
       <Filter>app</Filter>
     </ClCompile>
     <ClCompile Include="RTSKiller.cpp" />
+    <ClCompile Include="app\Win32App.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="app">

@@ -1,8 +1,10 @@
 #include "pch.h"
+#include "app/Win32Framework.h"
 #include "RTSKiller.h"
 
 int main()
 {
-	auto app = std::make_unique<rtsk::RTSKiller>();
-	return app->Run();
+	rtsk::RTSKiller app{};
+	rtsk::Win32Framework win32Framework{ &app };
+	return win32Framework.Run();
 }
